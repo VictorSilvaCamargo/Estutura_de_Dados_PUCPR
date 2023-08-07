@@ -1,12 +1,12 @@
 package Aula02;
 import java.util.Scanner;
 
-public class Pessoa {
+abstract class Pessoa {
     Scanner scanner = new Scanner(System.in);
 
-    private String nome;
-    private String cpf;
-    private String telefone;
+    protected String nome;
+    protected String cpf;
+    protected String telefone;
 
     public Pessoa() {
         this.nome = "";
@@ -26,22 +26,9 @@ public class Pessoa {
         return telefone;
     }
 
-    public Pessoa cadastrarPessoa() {
-        Pessoa novaPessoa = new Pessoa();
+    abstract public Pessoa cadastrarPessoa();
 
-        System.out.println("Digite seu nome:");
-        novaPessoa.nome = scanner.nextLine();
-        System.out.println("Digite seu cpf:");
-        novaPessoa.cpf = scanner.nextLine();
-        System.out.println("Digite seu telefone:");
-        novaPessoa.telefone = scanner.nextLine();
+    abstract public void imprimirPessoa();
 
-        return novaPessoa;
-    }
 
-    public void imprimirPessoa() {
-        System.out.println("Nome: " + nome);
-        System.out.println("CPF: " + cpf);
-        System.out.println("Telefone: " + telefone);
-    }
 }

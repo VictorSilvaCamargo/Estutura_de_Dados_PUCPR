@@ -2,11 +2,11 @@ package Aula02;
 
 public class Main {
     public static void main(String[] args) {
-        int numCadastros = 5;
+        int numCadastros = 1;
         Pessoa[] pessoas = new Pessoa[numCadastros];
 
         for (int i = 0; i < numCadastros; i++) {
-            Pessoa pessoa = new Pessoa();
+            Funcionario pessoa = new Funcionario();
             pessoas[i] = pessoa.cadastrarPessoa();
         }
 
