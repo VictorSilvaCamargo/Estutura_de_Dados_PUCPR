@@ -5,14 +5,12 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int selecionador = 0;
+        int selecionador = -1;
 
         System.out.println("Insira o tamanho da capacidade da pilha:");
         int capacidade = scanner.nextInt();
 
         Pilha pilha = new Pilha(capacidade);
-
-        selecionador = scanner.nextInt();
 
         while (selecionador != 0) {
             System.out.println("Selecione as opções:");
@@ -23,6 +21,7 @@ public class Main {
             System.out.println("Opção 5: Imprimir");
             System.out.println("Opção 0: Sair");
 
+            selecionador = scanner.nextInt();
 
             if (selecionador == 1) {
                 pilha.inserir();
@@ -35,7 +34,7 @@ public class Main {
             } else if (selecionador == 5) {
                 pilha.imprime();
             }
-            selecionador = scanner.nextInt();
+
         }
     }
 }

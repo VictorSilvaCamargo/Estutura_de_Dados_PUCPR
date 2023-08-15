@@ -24,21 +24,12 @@ public class Pilha {
     }
 
     public boolean cheia() {
-        if(topo == capacidade -1){
-            return true;
-
-        } else {
-            return false;
-        }
+        return topo == capacidade - 1;
     }
 
 
     public boolean vazia() {
-        if (topo == -1) {
-            return true;
-        } else {
-            return false;
-        }
+        return topo == -1;
     }
 
     public void remove() {
@@ -50,11 +41,9 @@ public class Pilha {
         }
     }
 
-
-
     public void imprime(){
-        for(int i = 0; i < dados.length; i++){
-            System.out.println(dados[i]);
+        for (int dado : dados) {
+            System.out.println(dado);
         }
     }
 
