@@ -1,5 +1,7 @@
 package Aula04;
 
+import java.util.Arrays;
+
 public class Pilha {
     private int capacidade;
     private int topo;
@@ -13,10 +15,10 @@ public class Pilha {
     }
 
 
-    public void inserir() {
+    public void inserir(int elemento) {
         if(!cheia()){
             topo = topo + 1;
-            dados[topo] = 10;
+            dados[topo] = elemento;
 
         } else {
             System.out.println("A ilha esta cheia!");

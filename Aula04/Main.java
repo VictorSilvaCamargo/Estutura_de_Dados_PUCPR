@@ -24,7 +24,8 @@ public class Main {
             selecionador = scanner.nextInt();
 
             if (selecionador == 1) {
-                pilha.inserir();
+                int elemento = scanner.nextInt();
+                pilha.inserir(elemento);
             } else if (selecionador == 2) {
                 System.out.println(pilha.cheia());
             } else if (selecionador == 3) {
