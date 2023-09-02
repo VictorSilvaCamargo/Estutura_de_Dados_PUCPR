@@ -1,4 +1,4 @@
-package Aula06;
+package TDE1.Exercicio1;
 
 public class Node {
     private Integer informacao;
