@@ -13,25 +13,25 @@ public class Main {
 
         do {
             System.out.println("Menu:");
-            System.out.println("1. Empilhar elemento");
-            System.out.println("2. Desempilhar elemento");
-            System.out.println("3. Imprimir a lista Encadeada");
+            System.out.println("1. Inserir elemento");
+            System.out.println("2. Remover elemento");
+            System.out.println("3. Imprimir a Pilha");
             System.out.println("4. Sair");
             System.out.print("Escolha uma opção: ");
             opcao = scanner.nextInt();
 
             switch (opcao) {
                 case 1 -> {
-                    System.out.print("Digite o elemento a ser empilhado: ");
+                    System.out.print("Digite o elemento a ser inserido: ");
                     int elementToPush = scanner.nextInt();
                     pilha.add(elementToPush);
-                    System.out.println("Elemento empilhado.");
+                    System.out.println("Elemento inserido.");
                 }
                 case 2 -> {
                     if (!pilha.vazia()) {
                         int elementoDesempilhado = pilha.topo();
                         pilha.remove();
-                        System.out.println("Elemento desempilhado: " + elementoDesempilhado);
+                        System.out.println("Elemento removido: " + elementoDesempilhado);
                     } else {
                         System.out.println("A pilha está vazia.");
                     }

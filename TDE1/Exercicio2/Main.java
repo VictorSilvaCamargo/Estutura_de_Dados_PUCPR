@@ -11,8 +11,8 @@ public class Main {
 
         do {
             System.out.println("Menu:");
-            System.out.println("1. Enfileirar elemento");
-            System.out.println("2. Desenfileirar elemento");
+            System.out.println("1. Inserir elemento na fila");
+            System.out.println("2. Remover elemento da fila");
             System.out.println("3. Imprimir a fila");
             System.out.println("4. Sair");
             System.out.print("Escolha uma opção: ");
@@ -20,16 +20,16 @@ public class Main {
 
             switch (opcao) {
                 case 1 -> {
-                    System.out.print("Digite o elemento a ser enfileirado: ");
+                    System.out.print("Digite o elemento a ser inserido: ");
                     int elementToEnqueue = scanner.nextInt();
                     fila.enfileirar(elementToEnqueue);
-                    System.out.println("Elemento enfileirado.");
+                    System.out.println("Elemento inserido.");
                 }
                 case 2 -> {
                     if (!fila.vazia()) {
                         int elementoDesenfileirado = fila.inicio();
                         fila.desenfileirar();
-                        System.out.println("Elemento desenfileirado: " + elementoDesenfileirado);
+                        System.out.println("Elemento removido: " + elementoDesenfileirado);
                     } else {
                         System.out.println("A fila está vazia.");
                     }
